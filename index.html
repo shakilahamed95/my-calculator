@@ -25,21 +25,23 @@
     </header>
     <!-- main section start  -->
     <main>
+        <!-- income  and cost section  -->
         <section class="row g-5">
             <div class="col-12 col-sm-12 col-md-6 col-lg-6 mb-3">
-                <img class="image" src="images/image.jpg" alt="">
+                <img class="image img-fluid" src="images/image.jpg" alt="">
             </div>
             <div class="col-12 col-sm-12 col-md-6 col-lg-6 mb-3 pt-5 text-center">
                 <h3 class="fw-bolder"> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Income </h3> <br>
-                <p>Income: <input type="text"></p>
+                <p>Income: <input id="income-field" type="text"></p>
                 <h3 class="fw-bolder"> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Expenses</h3> <br>
-                <p>Food: <input type="text"></p>
-                <p>Rent: <input type="text"></p>
-                <p>Cloth: <input type="text"></p>
-                <button class="btn btn-primary" type="submit">Calculate</button>
-                <h5>Total Expenses: <span></span> </h5>
+                <p>Food: <input id="food-cost" type="text"></p>
+                <p>Rent: <input id="rent-cost" type="text"></p>
+                <p>Cloth: <input id="cloth-cost" type="text"></p>
+                <button class="btn btn-primary" id="calculate-btn" type="submit">Calculate</button><br>
+                <h5>Total Expenses: <span id="total-expenses"></span> </h5>
                 <br>
-                <h5>Balance:<span></span> </h5><br>
+                <h5>Balance:<span id="rest-money"></span> </h5><br>
+                <!-- saving section  -->
                 <p>Save: <input type="text">&nbsp&nbsp <i class="fas fa-percent"></i>&nbsp&nbsp&nbsp <button
                         class="btn btn-primary" type="submit">Save</button></p>
                 <br>
