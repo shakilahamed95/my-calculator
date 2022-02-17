@@ -1,11 +1,3 @@
-//  declearing function to update balance 
-function updateBalance(income, cost) {
-    const remainingBalance = income - cost;
-    const expences = document.getElementById("total-expenses");
-    expences.innerText = cost;
-    const newBalance = document.getElementById("rest-money")
-    newBalance.innerText = remainingBalance;
-}
 // function for getting total income 
 function totalIncome() {
     const incomeInput = document.getElementById("income-field").value;
@@ -57,7 +49,11 @@ document.getElementById("calculate-btn").addEventListener("click", function () {
     }
     else {
         incomeError.style.display = 'none';
-        updateBalance(income, cost);
+        const remainingBalance = income - cost;
+        const expences = document.getElementById("total-expenses");
+        expences.innerText = cost;
+        const newBalance = document.getElementById("rest-money")
+        newBalance.innerText = remainingBalance;
     }
 })
 // save button operation 
