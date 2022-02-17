@@ -26,26 +26,34 @@
     <!-- main section start  -->
     <main>
         <!-- income  and cost section  -->
-        <section class="row g-5">
+        <section class="row g-5 ">
             <div class="col-12 col-sm-12 col-md-6 col-lg-6 mb-3">
                 <img class="image img-fluid" src="images/image.jpg" alt="">
             </div>
-            <div class="col-12 col-sm-12 col-md-6 col-lg-6 mb-3 pt-5 text-center">
-                <h4 class="notify-section" id="notnumber-error">you should enter only number in all input field
-                </h4>
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 mb-3 pt-5 text-center section-color">
+                <h4 class="notify-section" id="income-error"><i class="fas fa-times-circle me-3"></i>you should enter
+                    your income in number with positive value</h4>
+
                 <h3 class="fw-bolder"> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Income </h3> <br>
-                <p>Income: <input id="income-field" type="text"></p>
-                <p class="notify-section" id="income-error">you should put your income in number</p>
+                <p>Income: <input class="input-background" id="income-field" type="text"></p>
                 <h3 class="fw-bolder"> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Expenses</h3> <br>
+                <h4 class="notify-section" id="expenses-error"><i class="fas fa-times-circle me-3"></i>you can put only
+                    number value in expenses
+                </h4>
+                <h4 class="notify-section" id="negative-error"><i class="fas fa-times-circle me-3"></i>you should enter
+                    only positive expenses number </h4>
                 <p>Food: <input id="food-cost" type="text"></p>
                 <p>Rent: <input id="rent-cost" type="text"></p>
                 <p>Cloth: <input id="cloth-cost" type="text"></p>
                 <button class="btn btn-primary" id="calculate-btn" type="submit">Calculate</button>
                 <br><br>
-                <h4 class="notify-section" id="calculation-error">you should increase your income to earn your bread
+                <h4 class="notify-section " id="calculation-error"> <i class="fas fa-times-circle me-3"></i>you should
+                    increase your
+                    income
+                    to earn your
+                    bread
                 </h4>
-                <h4 class="notify-section" id="input-error">you should put positive value in all input field
-                </h4>
+
                 <h5>Total Expenses: <span id="total-expenses"></span> </h5>
                 <br>
                 <h5>Balance:<span id="rest-money"></span> </h5><br>
@@ -53,7 +61,11 @@
                 <p>Save: <input id="saving-input" type="text">&nbsp&nbsp <i class="fas fa-percent"></i>&nbsp&nbsp&nbsp
                     <button class="btn btn-primary" id="save-btn" type="submit">Save</button>
                 </p>
-                <h4 class="notify-section" id="low-balance">Please increase your earning rate to save money
+                <h4 class="notify-section" id="low-balance"><i class="fas fa-times-circle me-3"></i>Please increase your
+                    earning rate to save money
+                </h4>
+                <h4 class="notify-section" id="not-number"><i class="fas fa-times-circle me-3"></i>Please enter
+                    only positive number value in save field
                 </h4>
                 <br>
                 <h5>Saving Amount: <span id="save-amount"></span> </h5>
