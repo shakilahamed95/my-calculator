@@ -12,14 +12,14 @@
     <!-- front awesome link  -->
     <script src="https://kit.fontawesome.com/188c945575.js" crossorigin="anonymous"></script>
     <!-- my css section  -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
 
 <body>
     <!-- header section start  -->
     <header>
-        <h1 class="text-center pt-5 pb-5 fw-bolder text-info">My Income Calculator <span><i
+        <h1 class="text-center pt-5 pb-5 fw-bolder text-info">My Income & Saving Calculator <span><i
                     class="fas fa-dollar-sign"></i></span>
         </h1>
     </header>
@@ -31,16 +31,19 @@
                 <img class="image img-fluid" src="images/image.jpg" alt="">
             </div>
             <div class="col-12 col-sm-12 col-md-6 col-lg-6 mb-3 pt-5 text-center section-color">
-                <h4 class="notify-section" id="income-error"><i class="fas fa-times-circle me-3"></i>you should enter
+                <h4 class="notify-section" id="income-input-error"><i class="fas fa-times-circle me-3"></i>you should
+                    enter
                     your income in number with positive value</h4>
 
                 <h3 class="fw-bolder"> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Income </h3> <br>
                 <p>Income: <input class="input-background" id="income-field" type="text"></p>
                 <h3 class="fw-bolder"> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Expenses</h3> <br>
-                <h4 class="notify-section" id="expenses-error"><i class="fas fa-times-circle me-3"></i>you can put only
+                <h4 class="notify-section" id="expenses-input-error"><i class="fas fa-times-circle me-3"></i>you can put
+                    only
                     number value in expenses
                 </h4>
-                <h4 class="notify-section" id="negative-error"><i class="fas fa-times-circle me-3"></i>you should enter
+                <h4 class="notify-section" id="expenses-negative-error"><i class="fas fa-times-circle me-3"></i>you
+                    should enter
                     only positive expenses number </h4>
                 <p>Food: <input id="food-cost" type="text"></p>
                 <p>Rent: <input id="rent-cost" type="text"></p>
@@ -62,7 +65,7 @@
                     <button class="btn btn-primary" id="save-btn" type="submit">Save</button>
                 </p>
                 <h4 class="notify-section" id="low-balance"><i class="fas fa-times-circle me-3"></i>Please increase your
-                    earning rate to save money
+                    earning to save money
                 </h4>
                 <h4 class="notify-section" id="not-number"><i class="fas fa-times-circle me-3"></i>Please enter
                     only positive number value in save field

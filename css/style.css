@@ -1,10 +1,9 @@
 .image{
-    /* width:700px; */
     height: 800px;
 }
 .notify-section{
     display: none;
-    background-color: rgba(255, 0, 0, 0.507);
+    color: rgba(243, 5, 5, 0.671);
     padding: 10px;
     margin-left: 40px;
     margin-right: 40px;

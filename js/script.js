@@ -1,3 +1,4 @@
+//  declearing function to update balance 
 function updateBalance(income, cost) {
     const remainingBalance = income - cost;
     const expences = document.getElementById("total-expenses");
@@ -5,10 +6,11 @@ function updateBalance(income, cost) {
     const newBalance = document.getElementById("rest-money")
     newBalance.innerText = remainingBalance;
 }
+// function for getting total income 
 function totalIncome() {
     const incomeInput = document.getElementById("income-field").value;
     const totalIncome = parseFloat(incomeInput);
-    const error = document.getElementById('income-error')
+    const error = document.getElementById('income-input-error')
     if (totalIncome < 0 || isNaN(incomeInput)) {
         error.style.display = 'block';
     }
@@ -17,6 +19,7 @@ function totalIncome() {
         return totalIncome;
     }
 }
+// function for getting my total Expenses 
 function totalCost() {
     const foodInput = document.getElementById("food-cost").value
     const foodCost = parseFloat(foodInput);
@@ -24,8 +27,8 @@ function totalCost() {
     const rentCost = parseFloat(rentInput);
     const clothInput = document.getElementById("cloth-cost").value;
     const clothCost = parseFloat(clothInput);
-    const inputError = document.getElementById('expenses-error');
-    const negativeError = document.getElementById('negative-error');
+    const inputError = document.getElementById('expenses-input-error');
+    const negativeError = document.getElementById('expenses-negative-error');
     if (isNaN(foodInput) || isNaN(clothInput) || isNaN(rentInput)) {
         inputError.style.display = 'block';
         negativeError.style.display = 'none';
@@ -42,7 +45,10 @@ function totalCost() {
         return totalCost;
     }
 }
+// calculate button operation 
+
 document.getElementById("calculate-btn").addEventListener("click", function () {
+    // function calling 
     const income = totalIncome();
     const cost = totalCost();
     const incomeError = document.getElementById('calculation-error');
@@ -54,14 +60,16 @@ document.getElementById("calculate-btn").addEventListener("click", function () {
         updateBalance(income, cost);
     }
 })
+// save button operation 
 document.getElementById('save-btn').addEventListener('click', function () {
     const lowBalance = document.getElementById("low-balance")
     const negativeInput = document.getElementById('not-number');
+    // calling function 
     const income = totalIncome()
     const cost = totalCost();
     const balance = income - cost;
     const savingInput = document.getElementById('saving-input').value;
-    const savingRate = parseInt(savingInput);
+    const savingRate = parseFloat(savingInput);
     const savingMoney = (income * (savingRate / 100));
     const remainBalance = balance - savingMoney;
     if (remainBalance < 0) {
@@ -77,11 +85,8 @@ document.getElementById('save-btn').addEventListener('click', function () {
     }
     else {
         negativeInput.style.display = 'none'
+        lowBalance.style.display = 'none'
         document.getElementById("save-amount").innerText = savingMoney;
         document.getElementById("remaining").innerText = remainBalance;
-        lowBalance.style.display = 'none'
     }
-
-
-
 })
